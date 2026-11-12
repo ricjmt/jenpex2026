@@ -23,8 +23,7 @@ const JENPEX = {
           turno: "Noite",
           atividades: [
             { hora: "19h",   titulo: "Abertura do evento – Polo JP", detalhe: "Apresentações artísticas" },
-            { hora: "19h30", titulo: "Exposição IDEAHUB" },
-            { hora: "19h30", titulo: "Exposição Hidroponia" },
+            { hora: "19h30", titulo: "Exposições", link: "#exposicoes" },
             { hora: "20h20", titulo: "Comunicação Oral", link: "#comunicacao-oral" }
           ]
         }
@@ -43,16 +42,86 @@ const JENPEX = {
         {
           turno: "Tarde",
           atividades: [
-            { hora: "14h", titulo: "Exibição dos PITs nas redes sociais e apresentação de trabalhos remotos" }
+            { hora: "14h", titulo: "Exibição dos Pitches nas redes sociais e apresentação de trabalhos remotos" }
           ]
         },
         {
           turno: "Noite",
           atividades: [
-            { hora: "19h", titulo: "Exposição Microbiologia" },
-            { hora: "19h", titulo: "Exposição Novos Produtos I" },
-            { hora: "19h", titulo: "Exposição Novos Produtos II" },
+            { hora: "19h", titulo: "Exposições", link: "#exposicoes" },
             { hora: "20h", titulo: "Comunicação Oral", link: "#comunicacao-oral" }
+          ]
+        }
+      ]
+    }
+  ],
+
+  /* ---------- EXPOSIÇÕES (programação noturna) ----------
+     Cada dia tem suas exposições; cada exposição pode ter trabalhos.
+     Na equipe, escreva cada pessoa como "Nome (Função)".
+     Funções com "Orientador" ou "Coorientador" aparecem em "Orientação".
+  */
+  exposicoes: [
+    {
+      dia: "18 de novembro", semana: "Quarta-feira", hora: "19h30",
+      itens: [
+        { nome: "Exposição IDEAHUB", trabalhos: [] },
+        { nome: "Exposição Hidroponia", trabalhos: [] }
+      ]
+    },
+    {
+      dia: "19 de novembro", semana: "Quinta-feira", hora: "19h",
+      itens: [
+        {
+          nome: "Exposição Microbiologia",
+          trabalhos: [
+            {
+              titulo: "Avaliação da produção de enzimas por diferentes fungos isolados de sementes de soja",
+              equipe: [
+                "Clara Suprani Marques (Orientador; autor correspondente)",
+                "Ricardo Marques Macedo (Coorientador)",
+                "Verônica Cristina Biolchi (Autor)",
+                "Karleide Lima Oliveira (Autor)",
+                "José Kauan Max da Silva (Autor)",
+                "Thayna Barboza Cavalcante (Autor)",
+                "Cristian Miguel Vorpagel Erbice (Autor)",
+                "Dielson Santana Santos (Autor)",
+                "Renick Iuri De Souza Francisco (Autor)",
+                "Izaque Marcelino Pereira (Autor)",
+                "Deoclecio Bruno Dos Santos (Autor)",
+                "Jeniffer Danielle da silva (Autor)",
+                "Helder Pereira dos Santos (Autor)"
+              ]
+            }
+          ]
+        },
+        {
+          nome: "Exposição de Novos Produtos",
+          trabalhos: [
+            {
+              titulo: "Iogurte com caramelo de baru: inovação e valorização de matéria-prima regional",
+              equipe: [
+                "Adolfo Vicente Araujo (Orientador)",
+                "Clara Suprani Marques (Orientador)",
+                "Gabriela Fontes Alvarenga (Coorientador)",
+                "Lucas Batista Da Silva (Autor)",
+                "Maria Dayane Tributino Pereira (Autor)",
+                "Vithória Maria Gomes da Silva (Autor correspondente)",
+                "Pedro Antonio de Araujo Silva (Autor)",
+                "Jucieli da Silva Sousa (Autor)"
+              ]
+            },
+            {
+              titulo: "Doce de uva em barra com sementes de chia: Roxinho da terra",
+              equipe: [
+                "Antonia Angetina da Silva Sousa (Autor)",
+                "Milka Aveline dos Santos (Autor correspondente)",
+                "Maria Roberta de Oliveira Pereira (Autor)",
+                "Bruno Pinto (Autor)",
+                "Vilani Maria Barbosa Armini (Autor)",
+                "Dhiego Alves da Silva Francelino (Autor)"
+              ]
+            }
           ]
         }
       ]
@@ -84,7 +153,8 @@ const JENPEX = {
     { atividade: "Ditadura e questões raciais", responsavel: "Rafael, Alexandre e Gisele", descricao: "Exposição de trabalhos sobre ditadura e questões raciais", local: "Corredor / Hall de entrada" },
     { atividade: "Laboratório de Solos", responsavel: "Daniel Valadão", descricao: "Apresentação do Laboratório de Solos", local: "Laboratório de Solos" },
     { atividade: "Laboratório de Microbiologia", responsavel: "Clara Suprani", descricao: "Apresentação do Laboratório de Microbiologia", local: "Laboratório de Microbiologia" },
-    { atividade: "Exposição sobre Petróleo", responsavel: "Aline Magela, Dham", descricao: "Trabalhos das turmas de 2º ano EMI", local: "Corredor / Hall de entrada (TV e mesa para exposição)" }
+    { atividade: "Exposição sobre Petróleo", responsavel: "Aline Magela, Dham", descricao: "Trabalhos das turmas de 2º ano EMI", local: "Corredor / Hall de entrada (TV e mesa para exposição)" },
+    { atividade: "Indicadores naturais de pH", responsavel: "Dham", descricao: "Apresentação demonstrativa de indicadores de pH", local: "Laboratório de Química" }
   ],
 
   /* ---------- BANNERS APROVADOS (Sapezal) ----------
