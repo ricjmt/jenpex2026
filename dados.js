@@ -88,10 +88,24 @@ const JENPEX = {
   ],
 
   /* ---------- BANNERS APROVADOS (Sapezal) ----------
-     Exemplo de item:
-     { titulo: "Título do trabalho", autores: "Nome 1, Nome 2", orientador: "Nome", local: "Sapezal – Sala X" },
+     Os trabalhos aparecem agrupados por eixo e em ordem alfabética de título.
+     Exemplo de item (orientador é opcional):
+     { eixo: "Eixo Temático 01 – Ensino", titulo: "Título do trabalho", autores: "Nome 1, Nome 2", orientador: "Nome" },
   */
-  banners: [],
+  banners: [
+    { eixo: "Eixo Temático 01 – Ensino", titulo: "AUSÊNCIA DE ALUMÍNIO TROCÁVEL E NECESSIDADE CALCULADA DE CALAGEM EM SOLO DE VEGETAÇÃO NATIVA", autores: "Maria de Lourdes Andrade Lima, Gilson de Souza Floriano, Renan da Silva Lima, Gustavo Joaquim Ferreira Grava, Guilherme Dos Santos Martins, William Fernandes de Além, Lucas Antonio Zanoni" },
+    { eixo: "Eixo Temático 01 – Ensino", titulo: "EVOLUÇÃO DO CONTROLE QUÍMICO DA MANCHA-DE-RAMULÁRIA NO ALGODOEIRO", autores: "Maria de Lourdes Andrade Lima, Gilson de Souza Floriano, Renan da Silva Lima, Gustavo Joaquim Ferreira Grava, Guilherme Dos Santos Martins, William Fernandes de Além, Lucas Antonio Zanoni" },
+    { eixo: "Eixo Temático 02 – Inovação Tecnológica e Transferência de Tecnologia", titulo: "VISÃO COMPUTACIONAL APLICADA AO DIAGNÓSTICO FITOSSANITÁRIO: DESAFIOS NA IDENTIFICAÇÃO DE APHELENCHOIDES BESSEYI VIA DEEP LEARNING", autores: "Edyane Luiza Pires Franco" },
+    { eixo: "Eixo Temático 03 – Agrícola e Agronegócio", titulo: "avaliacao de fertilidade", autores: "Felipe Augusto de Castro de Carli" },
+    { eixo: "Eixo Temático 03 – Agrícola e Agronegócio", titulo: "Avaliação da fertilidade do solo e recomendações de calagem", autores: "Gabriel Silva Meireles, Klécio Ramon Da Silva Santos, Maria Vanessa Leandro Rocha, Janaína Almeida Talavieira" },
+    { eixo: "Eixo Temático 03 – Agrícola e Agronegócio", titulo: "Diagnose Nutricional do Gergelim", autores: "Cristiano Martins dos Santos, Guilherme Almeida Silva, Adriana Lopes Araújo, Alisson José Pereira, Willian Carlos dos Santos, Matheus Iuri Damo, Julio Cesar Etiene Pereira" },
+    { eixo: "Eixo Temático 03 – Agrícola e Agronegócio", titulo: "O DESAFIO DE PROTEGER O MILHO SEM SEU PRINCIPAL ESCUDO", autores: "Cristiano Martins dos Santos, Guilherme Almeida Silva, Adriana Lopes Araújo, Alisson José Pereira, Willian Carlos dos Santos, Matheus Iuri Damo, Julio Cesar Etiene Pereira" },
+    { eixo: "Eixo Temático 03 – Agrícola e Agronegócio", titulo: "importancia do tratamento de semente de algodao para controle com mela", autores: "Felipe Augusto de Castro de Carli" },
+    { eixo: "Eixo Temático 03 – Agrícola e Agronegócio", titulo: "Principais fungicidas para controle de Stenocarpella spp. na cultura do milho", autores: "Gabriel Silva Meireles, Ivair Daneli Júnior, Klécio Ramon Da Silva Santos, Renata Gabriely Aureliana Pedro, Maria Vanessa Leandro Rocha, Gabriela Cristina adur, Michelle dos Santos Ribeiro, Eduardo Lirio Carnelossi, Janaína Almeida Talavieira" },
+    { eixo: "Eixo Temático 03 – Agrícola e Agronegócio", titulo: "AGRICULTURA ORGANICA E SUA CERTIFICAÇÃO", autores: "Gustavo Henrique da Silva, Pedro Henrique De Souza Alves, Alef Nascimento Sá, Kauan Henrique Alves Matias, Wendrew Dos Santos Custódio", orientador: "Ailson Maciel de Almeida" },
+    { eixo: "Eixo Temático 03 – Agrícola e Agronegócio", titulo: "FUNGICIDAS PARA MANCHA ALVO", autores: "Angela Vogt Webler, Gutemberg de Carvalho Nogueira, Claudia Matuchak, Landeir Oliveira, thales lucio rodrigues cavalcante" },
+    { eixo: "Eixo Temático 03 – Agrícola e Agronegócio", titulo: "analise de solos - fertilidade", autores: "João Maria da Silva, Luclezio Carvalho Silva, Josue Pereira Alencar Madeira, Nicoly Pinto dos Santos, José Raul Rocha Da Trindade, Gabrielle Dos Santos Tenorio" }
+  ],
 
   /* ---------- PITCH VIRTUAL APROVADOS ----------
      Exemplo de item (o link do vídeo é opcional):
