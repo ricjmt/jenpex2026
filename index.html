@@ -41,9 +41,9 @@ img{max-width:100%;display:block}
 
 /* navegação */
 nav{position:sticky;top:0;z-index:10;background:rgba(255,255,255,.96);backdrop-filter:blur(6px);border-bottom:1px solid var(--linha)}
-nav ul{list-style:none;margin:0 auto;padding:10px 24px;max-width:1120px;display:flex;gap:8px;overflow-x:auto;scrollbar-width:none}
+nav ul{list-style:none;margin:0 auto;padding:10px 24px;max-width:1120px;display:flex;gap:2px;overflow-x:auto;scrollbar-width:none}
 nav ul::-webkit-scrollbar{display:none}
-nav a{display:block;white-space:nowrap;text-decoration:none;font-weight:600;font-size:.92rem;color:var(--navy);padding:8px 16px;border-radius:999px;border:2px solid transparent}
+nav a{display:block;white-space:nowrap;text-decoration:none;font-weight:600;font-size:.88rem;color:var(--navy);padding:8px 13px;border-radius:999px;border:2px solid transparent}
 nav a:hover{border-color:var(--ambar)}
 nav a[aria-current="page"]{background:var(--navy);color:#fff}
 
@@ -138,6 +138,22 @@ nav li.insc{margin-left:auto}
 nav a.nav-insc{background:var(--laranja);color:#fff}
 nav a.nav-insc:hover{border-color:var(--laranja);background:#E04510}
 
+
+/* exposições */
+.expo-dia{margin-bottom:36px}
+.expo-cab{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap;border-bottom:3px solid var(--ambar);padding-bottom:10px;margin-bottom:6px}
+.expo-cab h3{margin:0;color:var(--navy);font-size:1.45rem;font-weight:800}
+.expo-cab h3 span{font-size:.95rem;font-weight:700;margin-left:6px}
+.d1 .expo-cab h3 span{color:var(--teal)}.d2 .expo-cab h3 span{color:var(--laranja)}
+.expo-hora{background:var(--navy);color:#fff;font-weight:700;font-size:.85rem;padding:5px 14px;border-radius:999px}
+.expo-item>h4{color:var(--navy);font-size:1.08rem;margin:22px 0 12px;padding-left:12px;border-left:6px solid var(--laranja)}
+.d1 .expo-item>h4{border-left-color:var(--teal)}
+.expo-sem{color:var(--suave);font-style:italic;margin:0 0 0 18px}
+.card p+p{margin-top:8px}
+.card p b{color:var(--navy);font-weight:600}
+.card .ori-l{color:var(--texto)}
+.card .corr{color:var(--teal);font-size:.82em}
+
 /* rodapé */
 footer{background:#fff;border-top:1px solid var(--linha)}
 .rodape{max-width:1120px;margin:0 auto;padding:22px 24px;display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap;font-size:.86rem;color:var(--suave)}
@@ -168,6 +184,7 @@ footer{background:#fff;border-top:1px solid var(--linha)}
   <ul>
     <li><a href="#inicio">Início</a></li>
     <li><a href="#programacao-geral">Programação Geral</a></li>
+    <li><a href="#exposicoes">Exposições</a></li>
     <li><a href="#mostra-cientifica">Mostra Científica</a></li>
     <li><a href="#banners">Banners</a></li>
     <li><a href="#pitch-virtual">Pitch Virtual</a></li>
@@ -190,6 +207,12 @@ footer{background:#fff;border-top:1px solid var(--linha)}
     <h2 class="titulo">Programação Geral</h2>
     <p class="subtitulo">Atividades dos dias 18 e 19 de novembro</p>
     <div class="dias" id="dias"></div>
+  </section>
+
+  <section class="vista" id="v-exposicoes">
+    <h2 class="titulo">Exposições</h2>
+    <p class="subtitulo">Programação noturna, nos dias 18 e 19 de novembro</p>
+    <div id="l-exposicoes"></div>
   </section>
 
   <section class="vista" id="v-mostra-cientifica">
@@ -251,11 +274,13 @@ footer{background:#fff;border-top:1px solid var(--linha)}
     lab:'<svg viewBox="0 0 24 24"><path d="M9 3h6M10 3v6L4.5 19a1.5 1.5 0 0 0 1.3 2h12.4a1.5 1.5 0 0 0 1.3-2L14 9V3"/><path d="M7 15h10"/></svg>',
     ban:'<svg viewBox="0 0 24 24"><rect x="6" y="3" width="12" height="14" rx="1"/><path d="M9 7h6M9 10h6M9 13h4M12 17v4M9 21h6"/></svg>',
     vid:'<svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="12" rx="2"/><path d="M10 8l4 2-4 2zM12 16v4M8 20h8"/></svg>',
+    exp:'<svg viewBox="0 0 24 24"><path d="M12 3l9 4-9 4-9-4z"/><path d="M5 9v6l7 3 7-3V9"/></svg>',
     mic:'<svg viewBox="0 0 24 24"><rect x="9" y="3" width="6" height="11" rx="3"/><path d="M5 11a7 7 0 0 0 14 0M12 18v3"/></svg>'
   };
   const breve = arr => arr.length ? `${arr.length} trabalho${arr.length>1?"s":""}` : null;
   const atalhos = [
     ["programacao-geral","Programação Geral","Atividades dos dias 18 e 19 de novembro","var(--teal)",ic.cal],
+    ["exposicoes","Exposições","Programação noturna, dias 18 e 19","var(--ambar)",ic.exp],
     ["mostra-cientifica","Mostra Científica","Trabalhos, orientadores e locais de exposição","var(--laranja)",ic.lab],
     ["banners","Banners aprovados",breve(D.banners),"var(--ambar)",ic.ban],
     ["pitch-virtual","Pitch Virtual aprovados",breve(D.pitch),"var(--teal)",ic.vid],
@@ -311,8 +336,30 @@ footer{background:#fff;border-top:1px solid var(--linha)}
     ? cards(D.comunicacao, x => `<div class="card"><span class="meta">${[x.dia,x.hora,x.sala,x.formato].filter(Boolean).map(esc).join("  |  ")}</span><h4>${esc(x.titulo)}</h4>${pessoa(x)}</div>`)
     : emBreve("A programação das sessões de comunicação oral será divulgada nesta página.");
 
+  /* exposições */
+  const pessoas = eq => {
+    const ori = [], aut = [];
+    (eq || []).forEach(p => {
+      const m = p.match(/^(.*?)\s*\((.*)\)\s*$/);
+      const nome = m ? m[1] : p, papel = m ? m[2] : "";
+      const corr = /correspondente/i.test(papel) ? ` <span class="corr">(autor correspondente)</span>` : "";
+      if (/orientador/i.test(papel)) ori.push(esc(nome) + (/coorientador/i.test(papel) ? " <span class='corr'>(coorientador)</span>" : "") + corr);
+      else aut.push(esc(nome) + corr);
+    });
+    return (ori.length ? `<p class="ori-l"><b>Orientação:</b> ${ori.join(", ")}</p>` : "") +
+           (aut.length ? `<p><b>Autores:</b> ${aut.join(", ")}</p>` : "");
+  };
+  document.getElementById("l-exposicoes").innerHTML = D.exposicoes.map((d,i) => `
+    <section class="expo-dia ${i%2?"d2":"d1"}">
+      <header class="expo-cab"><h3>${esc(d.dia)} <span>${esc(d.semana)}</span></h3><span class="expo-hora">a partir das ${esc(d.hora)}</span></header>
+      ${d.itens.map(x => `<div class="expo-item"><h4>${esc(x.nome)}</h4>
+        ${x.trabalhos && x.trabalhos.length
+          ? cards(x.trabalhos, t => `<div class="card trab"><h4>${esc(t.titulo)}</h4>${pessoas(t.equipe)}</div>`)
+          : `<p class="expo-sem">Os trabalhos desta exposição serão divulgados em breve.</p>`}</div>`).join("")}
+    </section>`).join("");
+
   /* navegação por âncora */
-  const ids = ["inicio","programacao-geral","mostra-cientifica","banners","pitch-virtual","comunicacao-oral"];
+  const ids = ["inicio","programacao-geral","exposicoes","mostra-cientifica","banners","pitch-virtual","comunicacao-oral"];
   function mostrar(){
     const h = location.hash.slice(1);
     const id = ids.includes(h) ? h : "inicio";
