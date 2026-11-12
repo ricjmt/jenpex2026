@@ -122,6 +122,8 @@ h3.secao{color:var(--navy);font-size:1.15rem;margin:34px 0 14px;padding-left:12p
 .card .meta{color:var(--laranja);font-weight:700;font-size:.85rem}
 .card h4{margin:4px 0 8px;color:var(--navy);font-size:1.02rem;line-height:1.35}
 .card p{margin:0;font-size:.9rem;color:var(--suave)}
+.card.trab h4{text-transform:uppercase;font-size:.92rem;letter-spacing:.01em}
+.card .ori{color:var(--teal);font-weight:600}
 .card a.botao{display:inline-block;margin-top:12px;background:var(--navy);color:#fff;text-decoration:none;font-weight:600;font-size:.86rem;padding:7px 16px;border-radius:999px}
 
 
@@ -291,8 +293,16 @@ footer{background:#fff;border-top:1px solid var(--linha)}
   const emBreve = txt => `<div class="breve-box"><strong>Em breve</strong><p>${txt}</p></div>`;
   const cards = (arr, f) => `<div class="cards">${arr.map(f).join("")}</div>`;
   const pessoa = x => `<p>${esc(x.autores)}${x.orientador?`<br>Orientação: ${esc(x.orientador)}`:""}</p>`;
+  const porEixo = arr => {
+    const g = {};
+    arr.forEach(x => (g[x.eixo || "Outros"] ||= []).push(x));
+    return Object.keys(g).sort((a,b)=>a.localeCompare(b,"pt-BR")).map(e =>
+      `<h3 class="secao">${esc(e)}</h3>` + cards(g[e].sort((a,b)=>a.titulo.localeCompare(b.titulo,"pt-BR",{sensitivity:"base"})),
+        x => `<div class="card trab"><h4>${esc(x.titulo)}</h4><p>${esc(x.autores)}${x.orientador?`<br><span class="ori">Orientação: ${esc(x.orientador)}</span>`:""}</p></div>`)
+    ).join("");
+  };
   document.getElementById("l-banners").innerHTML = D.banners.length
-    ? cards(D.banners, x => `<div class="card">${x.local?`<span class="meta">${esc(x.local)}</span>`:""}<h4>${esc(x.titulo)}</h4>${pessoa(x)}</div>`)
+    ? porEixo(D.banners)
     : emBreve("A relação dos banners aprovados será divulgada nesta página.");
   document.getElementById("l-pitch").innerHTML = D.pitch.length
     ? cards(D.pitch, x => `<div class="card"><h4>${esc(x.titulo)}</h4>${pessoa(x)}${x.link?`<a class="botao" href="${esc(x.link)}" target="_blank" rel="noopener">Assistir ao pitch</a>`:""}</div>`)
