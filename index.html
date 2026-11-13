@@ -323,14 +323,14 @@ footer{background:#fff;border-top:1px solid var(--linha)}
     arr.forEach(x => (g[x.eixo || "Outros"] ||= []).push(x));
     return Object.keys(g).sort((a,b)=>a.localeCompare(b,"pt-BR")).map(e =>
       `<h3 class="secao">${esc(e)}</h3>` + cards(g[e].sort((a,b)=>a.titulo.localeCompare(b.titulo,"pt-BR",{sensitivity:"base"})),
-        x => `<div class="card trab"><h4>${esc(x.titulo)}</h4><p>${esc(x.autores)}${x.orientador?`<br><span class="ori">Orientação: ${esc(x.orientador)}</span>`:""}</p></div>`)
+        x => `<div class="card trab"><h4>${esc(x.titulo)}</h4><p>${esc(x.autores)}${x.orientador?`<br><span class="ori">Orientação: ${esc(x.orientador)}</span>`:""}</p>${x.link?`<a class="botao" href="${esc(x.link)}" target="_blank" rel="noopener">Assistir ao pitch</a>`:""}</div>`)
     ).join("");
   };
   document.getElementById("l-banners").innerHTML = D.banners.length
     ? porEixo(D.banners)
     : emBreve("A relação dos banners aprovados será divulgada nesta página.");
   document.getElementById("l-pitch").innerHTML = D.pitch.length
-    ? cards(D.pitch, x => `<div class="card"><h4>${esc(x.titulo)}</h4>${pessoa(x)}${x.link?`<a class="botao" href="${esc(x.link)}" target="_blank" rel="noopener">Assistir ao pitch</a>`:""}</div>`)
+    ? porEixo(D.pitch)
     : emBreve("A relação dos pitches virtuais aprovados será divulgada nesta página.");
   document.getElementById("l-comunicacao").innerHTML = D.comunicacao.length
     ? cards(D.comunicacao, x => `<div class="card"><span class="meta">${[x.dia,x.hora,x.sala,x.formato].filter(Boolean).map(esc).join("  |  ")}</span><h4>${esc(x.titulo)}</h4>${pessoa(x)}</div>`)
