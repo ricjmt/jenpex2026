@@ -595,15 +595,9 @@ const JENPEX = {
               titulo: "Preço justo, a economia do dia a dia em CNP, agronegócio e economia local",
               eixo: "Eixo 04 – Outros",
               autores: "Willian Matheus da Silva Dias, Hevillyn Milhomem de Matos dos Santos, Vitor Hugo Henik, Kawana de Almeida Carvalho"
-            },
-            {
-              hora: "21h15",
-              titulo: "Preço justo: a economia do dia a dia em Campo Novo do Parecis",
-              eixo: "Eixo 04 – Outros",
-              autores: "Fernanda Feliciano de Almeida Saturnino, Dâmaris Cássia Pereira de Oliveira, Ezenira Ferreira da Luz Santos"
             }
           ],
-          horario: "20h às 21h30",
+          horario: "20h às 21h15",
           responsavel: "Adolfo Vicente Araujo"
         }
       ],
