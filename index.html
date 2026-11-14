@@ -154,6 +154,36 @@ nav a.nav-insc:hover{border-color:var(--laranja);background:#E04510}
 .card .ori-l{color:var(--texto)}
 .card .corr{color:var(--teal);font-size:.82em}
 
+
+/* comunicação oral */
+[hidden]{display:none!important}
+.co-info{max-width:720px;margin:-14px auto 22px;text-align:center;font-size:.92rem}
+.co-ctrl{display:flex;flex-wrap:wrap;gap:14px;align-items:center;justify-content:space-between;margin-bottom:24px}
+.co-tabs{display:flex;gap:6px;flex-wrap:wrap}
+.co-tabs button{font:inherit;font-weight:700;font-size:.92rem;color:var(--navy);background:#fff;border:2px solid var(--ambar);border-radius:999px;padding:8px 18px;cursor:pointer}
+.co-tabs button small{font-weight:500;color:var(--suave);margin-left:4px}
+.co-tabs button[aria-selected="true"]{background:var(--navy);border-color:var(--navy);color:#fff}
+.co-tabs button[aria-selected="true"] small{color:#d8d9f2}
+.co-tabs.off{opacity:.5}
+.co-busca{margin:0;flex:1;min-width:240px;max-width:420px}
+.co-dia{margin-bottom:36px}
+.co-salas{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,470px),1fr));gap:18px;margin-top:16px}
+.co-sala{border:2px solid var(--ambar);border-radius:var(--raio);overflow:hidden;background:#fff}
+.co-sala>header{background:var(--teal);color:#fff;padding:14px 20px}
+.d2 .co-sala>header{background:var(--laranja)}
+.co-sala h4{margin:0;font-size:1.2rem;font-weight:800}
+.co-eixo{margin:2px 0 4px;font-weight:600;font-size:.92rem;line-height:1.35}
+.co-meta{margin:0;font-size:.82rem;opacity:.92}
+.co-sala ol{list-style:none;margin:0;padding:4px 20px 8px}
+.co-sala li{display:grid;grid-template-columns:62px 1fr;gap:12px;padding:13px 0;border-bottom:1px solid var(--linha)}
+.co-sala li:last-child{border-bottom:0}
+.co-sala li .hora{font-size:1.05rem}
+.co-sala h5{margin:0 0 4px;color:var(--navy);font-size:.93rem;line-height:1.35;font-weight:700}
+.co-sala li p{margin:2px 0 0;font-size:.86rem;color:var(--suave);line-height:1.45}
+.co-sala li p b{color:var(--navy);font-weight:600}
+.co-sala li .ori-l{color:var(--texto)}
+.co-tag{display:inline-block;background:var(--teal-cl);color:var(--teal);font-weight:700;font-size:.72rem;padding:1px 10px;border-radius:999px;margin:2px 0 4px}
+
 /* rodapé */
 footer{background:#fff;border-top:1px solid var(--linha)}
 .rodape{max-width:1120px;margin:0 auto;padding:22px 24px;display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap;font-size:.86rem;color:var(--suave)}
@@ -241,8 +271,14 @@ footer{background:#fff;border-top:1px solid var(--linha)}
 
   <section class="vista" id="v-comunicacao-oral">
     <h2 class="titulo">Comunicação Oral</h2>
-    <p class="subtitulo">Sessões das noites de 18 e 19 de novembro</p>
+    <p class="subtitulo">Sessões das noites de 18 e 19 de novembro, no Polo JP</p>
+    <p class="co-info" id="co-info"></p>
+    <div class="co-ctrl">
+      <div class="co-tabs" role="tablist" id="co-tabs"></div>
+      <label class="busca co-busca"><input id="co-filtro" type="search" placeholder="Busque por nome ou título" aria-label="Buscar nas comunicações orais"></label>
+    </div>
     <div id="l-comunicacao"></div>
+    <p class="vazio" id="co-vazio">Nenhuma apresentação encontrada para essa busca.</p>
   </section>
 </main>
 
@@ -284,7 +320,7 @@ footer{background:#fff;border-top:1px solid var(--linha)}
     ["mostra-cientifica","Mostra Científica","Trabalhos, orientadores e locais de exposição","var(--laranja)",ic.lab],
     ["banners","Banners aprovados",breve(D.banners),"var(--ambar)",ic.ban],
     ["pitch-virtual","Pitch Virtual aprovados",breve(D.pitch),"var(--teal)",ic.vid],
-    ["comunicacao-oral","Comunicação Oral",breve(D.comunicacao),"var(--laranja)",ic.mic]
+    ["comunicacao-oral","Comunicação Oral",breve(D.comunicacao.flatMap(d=>d.salas.flatMap(s=>s.trabalhos))),"var(--laranja)",ic.mic]
   ];
   document.getElementById("atalhos").innerHTML = atalhos.map(([id,t,d,c,i]) =>
     `<a class="atalho" href="#${id}"><span class="cor" style="background:${c}">${i}</span><span class="txt"><strong>${t}</strong>${d?`<small>${d}</small>`:`<small class="breve">Em breve</small>`}</span></a>`).join("");
@@ -332,10 +368,6 @@ footer{background:#fff;border-top:1px solid var(--linha)}
   document.getElementById("l-pitch").innerHTML = D.pitch.length
     ? porEixo(D.pitch)
     : emBreve("A relação dos pitches virtuais aprovados será divulgada nesta página.");
-  document.getElementById("l-comunicacao").innerHTML = D.comunicacao.length
-    ? cards(D.comunicacao, x => `<div class="card"><span class="meta">${[x.dia,x.hora,x.sala,x.formato].filter(Boolean).map(esc).join("  |  ")}</span><h4>${esc(x.titulo)}</h4>${pessoa(x)}</div>`)
-    : emBreve("A programação das sessões de comunicação oral será divulgada nesta página.");
-
   /* exposições */
   const pessoas = eq => {
     const ori = [], aut = [];
@@ -357,6 +389,62 @@ footer{background:#fff;border-top:1px solid var(--linha)}
           ? cards(x.trabalhos, t => `<div class="card trab"><h4>${esc(t.titulo)}</h4>${pessoas(t.equipe)}</div>`)
           : `<p class="expo-sem">Os trabalhos desta exposição serão divulgados em breve.</p>`}</div>`).join("")}
     </section>`).join("");
+
+  /* comunicação oral */
+  (function(){
+    const box = document.getElementById("l-comunicacao");
+    if (!D.comunicacao.length) {
+      box.innerHTML = emBreve("A programação das sessões de comunicação oral será divulgada nesta página.");
+      document.querySelector(".co-ctrl").hidden = true; return;
+    }
+    document.getElementById("co-info").textContent = D.comunicacaoInfo || "";
+    const varias = s => s.trabalhos.some(t => t.eixo);
+    const equipe = t =>
+      (t.orientador ? `<p class="ori-l"><b>Orientação:</b> ${esc(t.orientador)}</p>` : "") +
+      (t.coorientador ? `<p class="ori-l"><b>Coorientação:</b> ${esc(t.coorientador)}</p>` : "") +
+      (t.autores ? `<p><b>${/,/.test(t.autores) ? "Autores" : "Autoria"}:</b> ${esc(t.autores)}</p>` : "");
+    box.innerHTML = D.comunicacao.map((d,i) => `
+      <section class="co-dia ${i%2?"d2":"d1"}" data-dia="${i}">
+        <header class="expo-cab"><h3>${esc(d.dia)} <span>${esc(d.semana)}</span></h3><span class="expo-hora">início às ${esc(d.inicio || "")}</span></header>
+        <div class="co-salas">${d.salas.map(s => `
+          <article class="co-sala">
+            <header>
+              <h4>${esc(s.sala)}</h4>
+              <p class="co-eixo">${esc(s.eixo)}</p>
+              <p class="co-meta">${esc(s.horario || "")}${s.responsavel ? `  |  Responsável: ${esc(s.responsavel)}` : ""}</p>
+            </header>
+            <ol>${s.trabalhos.map(t => `
+              <li data-busca="${esc([t.titulo,t.orientador,t.coorientador,t.autores].filter(Boolean).join(" "))}">
+                <span class="hora">${esc(t.hora)}</span>
+                <div><h5>${esc(t.titulo)}</h5>${varias(s) && t.eixo ? `<span class="co-tag">${esc(t.eixo)}</span>` : ""}${equipe(t)}</div>
+              </li>`).join("")}</ol>
+          </article>`).join("")}</div>
+      </section>`).join("");
+    const tabs = document.getElementById("co-tabs");
+    tabs.innerHTML = D.comunicacao.map((d,i) => `<button role="tab" data-i="${i}">${esc(d.dia.replace(" de novembro"," nov"))} <small>${esc(d.semana)}</small></button>`).join("") +
+      `<button role="tab" data-i="all">Ambos</button>`;
+    let atual = "0";
+    const aplicar = () => {
+      const q = norm(document.getElementById("co-filtro").value.trim());
+      let total = 0;
+      document.querySelectorAll(".co-dia").forEach(sec => {
+        const diaOk = q || atual === "all" || sec.dataset.dia === atual;
+        let nDia = 0;
+        sec.querySelectorAll(".co-sala").forEach(sala => {
+          let n = 0;
+          sala.querySelectorAll("li").forEach(li => { const ok = !q || norm(li.dataset.busca).includes(q); li.hidden = !ok; if (ok) n++; });
+          sala.hidden = !n; nDia += n;
+        });
+        sec.hidden = !diaOk || !nDia; if (diaOk) total += nDia;
+      });
+      tabs.querySelectorAll("button").forEach(b => b.setAttribute("aria-selected", !q && b.dataset.i === atual));
+      tabs.classList.toggle("off", !!q);
+      document.getElementById("co-vazio").style.display = total ? "none" : "block";
+    };
+    tabs.addEventListener("click", e => { const b = e.target.closest("button"); if (!b) return; atual = b.dataset.i; document.getElementById("co-filtro").value = ""; aplicar(); });
+    document.getElementById("co-filtro").addEventListener("input", aplicar);
+    aplicar();
+  })();
 
   /* navegação por âncora */
   const ids = ["inicio","programacao-geral","exposicoes","mostra-cientifica","banners","pitch-virtual","comunicacao-oral"];
