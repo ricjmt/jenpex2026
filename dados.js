@@ -363,46 +363,52 @@ const JENPEX = {
         },
         {
           sala: "Sala 3",
-          eixo: "Eixo 03 – Agrícola e Agronegócio",
+          eixo: "Eixos 03 – Agrícola e Agronegócio e 04 – Outros",
           trabalhos: [
             {
               hora: "20h20",
               titulo: "Gestão de pessoas e liderança em propriedades rurais de Campo Novo do Parecis-MT",
+              eixo: "Eixo 03 – Agrícola e Agronegócio",
               orientador: "Jefferson Davi Ferreira dos Santos",
               autores: "Felipe Santos Santiago, Phablo Henrique Fortes"
             },
             {
               hora: "20h35",
-              titulo: "Tendências tecnológicas para produção de aves e suínos no Brasil versus desafios da sanidade animal",
-              orientador: "Ailson Maciel de Almeida",
-              autores: "Milena Fronha Marques, Juliana Matos de Oliveira, Heitor Lorenzetti, Welberton Vittorazzi Candido do Nascimento"
+              titulo: "Diagnóstico financeiro – La Belles",
+              eixo: "Eixo 04 – Outros",
+              autores: "Simone da Silva Clemente, Dayanne Jouse Santos Fernandes, Maria Eduarda Gonçalves Costa, Maria Rafaela da Silva"
             },
             {
               hora: "20h50",
               titulo: "Sucessão familiar e governança rural no município de Campo Novo do Parecis-MT",
+              eixo: "Eixo 03 – Agrícola e Agronegócio",
               orientador: "Jefferson Davi Ferreira dos Santos",
               autores: "Analia Laconi Victor Martins, Maria Eduarda Mendes Lampert"
             },
             {
               hora: "21h05",
-              titulo: "Planejamento de safra e tomada de decisão",
-              orientador: "Jefferson Davi Ferreira dos Santos",
-              autores: "Joyce Fernanda de Almeida, Zilda Tureta Batista Silva"
-            },
-            {
-              hora: "21h20",
-              titulo: "Maturação desuniforme e interferência de plantas daninhas de final de ciclo na cultura da soja",
-              autores: "Milena Fronha Marques, Mariana Vilasbôas Both, Ezequiel Matheus Brugnera Milani, Juliana Matos de Oliveira, Welberton Vittorazzi Candido do Nascimento, Larissa Stell Silveira"
-            },
-            {
-              hora: "21h35",
               titulo: "Relatório Fitotecnia 1",
+              eixo: "Eixo 03 – Agrícola e Agronegócio",
               orientador: "Luis Otávio Cavicchioli Sgobi, Bruno Neves Barros",
               autores: "João Felipe Tataíra Silva, André Rafael Siqueira Corrêa, Sabrina Araldi do Prado"
             },
             {
+              hora: "21h20",
+              titulo: "Maturação desuniforme e interferência de plantas daninhas de final de ciclo na cultura da soja",
+              eixo: "Eixo 03 – Agrícola e Agronegócio",
+              autores: "Milena Fronha Marques, Mariana Vilasbôas Both, Ezequiel Matheus Brugnera Milani, Juliana Matos de Oliveira, Welberton Vittorazzi Candido do Nascimento, Larissa Stell Silveira"
+            },
+            {
+              hora: "21h35",
+              titulo: "Planejamento de safra e tomada de decisão",
+              eixo: "Eixo 03 – Agrícola e Agronegócio",
+              orientador: "Jefferson Davi Ferreira dos Santos",
+              autores: "Joyce Fernanda de Almeida, Zilda Tureta Batista Silva"
+            },
+            {
               hora: "21h50",
               titulo: "Gestão financeira e controle dos custos de produção em propriedades rurais de Campo Novo do Parecis-MT",
+              eixo: "Eixo 03 – Agrícola e Agronegócio",
               orientador: "Jefferson Davi Ferreira dos Santos",
               autores: "Milena Fronha Marques, Juliana Matos de Oliveira"
             }
@@ -412,43 +418,51 @@ const JENPEX = {
         },
         {
           sala: "Sala 4",
-          eixo: "Eixo 04 – Outros",
+          eixo: "Eixos 04 – Outros e 03 – Agrícola e Agronegócio",
           trabalhos: [
             {
               hora: "20h20",
               titulo: "Dinâmica da formação de preços no setor de lanchonetes em Campo Novo do Parecis-MT",
+              eixo: "Eixo 04 – Outros",
               orientador: "Lorena Gomes dos Santos",
               autores: "Amanda Vitoria da Silva Roberto, Maria Clara Silva dos Santos"
             },
             {
               hora: "20h35",
-              titulo: "Preço justo",
-              autores: "Maria Eduarda Franco de Oliveira Bilibio, Vitor Daniel Vidal Cristalino, Jonas Santos de Oliveira"
+              titulo: "Tendências tecnológicas para produção de aves e suínos no Brasil versus desafios da sanidade animal",
+              eixo: "Eixo 03 – Agrícola e Agronegócio",
+              orientador: "Ailson Maciel de Almeida",
+              autores: "Milena Fronha Marques, Juliana Matos de Oliveira, Heitor Lorenzetti, Welberton Vittorazzi Candido do Nascimento"
             },
             {
               hora: "20h50",
               titulo: "JENPEX",
+              eixo: "Eixo 04 – Outros",
               autores: "Natallia Ritielle de Lima Santos, Aline Fraga Reis da Silva, Mirella Camila dos Santos Silva, Elaine Ortiz Anastacio"
             },
             {
               hora: "21h05",
               titulo: "Preço justo: a economia do dia a dia no comércio de vestuário em Campo Novo do Parecis",
+              eixo: "Eixo 04 – Outros",
               autores: "Jadrielly Almeida dos Santos, Eberth Hiago do Nascimento Lins, Gustavo Bortolini dos Santos"
             },
             {
               hora: "21h20",
               titulo: "Diagnóstico financeiro de construtora microempresa (ME): análise de fluxo de caixa, mão de obra e capital de giro na construção civil",
+              eixo: "Eixo 04 – Outros",
               autores: "Bárbara Natália Ricardo de Meneses, Jayane Ramos de Lima, Jhonny Santana da Silva, Juvenilio Ferreira Gomes Neto"
             },
             {
               hora: "21h35",
               titulo: "Mini consultoria: gestão financeira e orçamentária e marketing estratégico",
+              eixo: "Eixo 04 – Outros",
               autores: "Josiane Pereira de Souza, Lincoln dos Santos Braga"
             },
             {
               hora: "21h50",
-              titulo: "Diagnóstico financeiro – La Belles",
-              autores: "Simone da Silva Clemente, Dayanne Jouse Santos Fernandes, Maria Eduarda Gonçalves Costa, Maria Rafaela da Silva"
+              titulo: "Preço justo",
+              eixo: "Eixo 04 – Outros",
+              autores: "Maria Eduarda Franco de Oliveira Bilibio, Vitor Daniel Vidal Cristalino, Jonas Santos de Oliveira"
             }
           ],
           horario: "20h20 às 22h05",
