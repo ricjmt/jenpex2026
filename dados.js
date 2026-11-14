@@ -385,8 +385,9 @@ const JENPEX = {
             },
             {
               hora: "21h05",
-              titulo: "Ferrugem-asiática da soja no Brasil: evolução do controle químico e desafios da resistência a fungicidas",
-              autores: "João Maria da Silva, Luclezio Carvalho Silva, Josue Pereira Alencar Madeira, Nicoly Pinto dos Santos, José Raul Rocha da Trindade, Gabrielle dos Santos Tenorio"
+              titulo: "Planejamento de safra e tomada de decisão",
+              orientador: "Jefferson Davi Ferreira dos Santos",
+              autores: "Joyce Fernanda de Almeida, Zilda Tureta Batista Silva"
             },
             {
               hora: "21h20",
@@ -484,9 +485,14 @@ const JENPEX = {
               hora: "20h45",
               titulo: "Escape room educacional: protagonismo estudantil no curso técnico em Manutenção e Suporte em Informática",
               autores: "Monique Casagranda, Gustavo Alves do Nascimento"
+            },
+            {
+              hora: "21h",
+              titulo: "Extensão tecnológica para formação profissional em bioenergia",
+              autores: "Tiago Alquaz Matias, Adolfo Vicente Araujo, Fernando Lucas Menim Perez Filho, Jefferson Davi Ferreira dos Santos, Luiz Antonio Andrade Silva Nunes, Luana Gabrand Fernandes, Marcos Aurelio Bitencourt dos Santos"
             }
           ],
-          horario: "20h às 21h00",
+          horario: "20h às 21h15",
           responsavel: "Ricardo Marques Macedo"
         },
         {
@@ -515,41 +521,31 @@ const JENPEX = {
               autores: "Mariana Vilasbôas Both, Maria Cláudia da Silva Sousa, Maria Eduarda Mendes Lampert, Leonardo Pereira de Oliveira, Ezequiel Matheus Brugnera Milani"
             }
           ],
-          horario: "20h às 21h00",
+          horario: "20h às 21h",
           responsavel: "Aline Magela"
         },
         {
           sala: "Sala 3",
-          eixo: "Eixos 03 – Agrícola e Agronegócio e 01 – Ensino",
+          eixo: "Eixo 03 – Agrícola e Agronegócio",
           trabalhos: [
             {
               hora: "20h",
               titulo: "Desperdício ambiental de fibra de algodão na colheita mecanizada: quantificação da pluma remanescente em Campo Novo do Parecis-MT",
-              eixo: "Eixo 03 – Agrícola e Agronegócio",
               orientador: "Melkezedeque Alves Lira",
               autores: "Francyeli Celestino Aureliano, Wellisson Ryan Aureliano da Silva"
             },
             {
               hora: "20h15",
               titulo: "A evolução da suinocultura em Mato Grosso: crescimento da produção, consumo e importância econômica",
-              eixo: "Eixo 03 – Agrícola e Agronegócio",
               autores: "Isabely Furtado Augusto de Melo, Gabriel Benites de Oliveira, Bruno Neves Barros, Matheus Alves Malgarize, João Felipe Tataíra Silva"
             },
             {
               hora: "20h30",
-              titulo: "Planejamento de safra e tomada de decisão",
-              eixo: "Eixo 03 – Agrícola e Agronegócio",
-              orientador: "Jefferson Davi Ferreira dos Santos",
-              autores: "Joyce Fernanda de Almeida, Zilda Tureta Batista Silva"
-            },
-            {
-              hora: "20h45",
-              titulo: "Extensão tecnológica para formação profissional em bioenergia",
-              eixo: "Eixo 01 – Ensino",
-              autores: "Tiago Alquaz Matias, Adolfo Vicente Araujo, Fernando Lucas Menim Perez Filho, Jefferson Davi Ferreira dos Santos, Luiz Antonio Andrade Silva Nunes, Luana Gabrand Fernandes, Marcos Aurelio Bitencourt dos Santos"
+              titulo: "Ferrugem-asiática da soja no Brasil: evolução do controle químico e desafios da resistência a fungicidas",
+              autores: "João Maria da Silva, Luclezio Carvalho Silva, Josue Pereira Alencar Madeira, Nicoly Pinto dos Santos, José Raul Rocha da Trindade, Gabrielle dos Santos Tenorio"
             }
           ],
-          horario: "20h às 21h00",
+          horario: "20h às 20h45",
           responsavel: "Regiane Gomes"
         },
         {
