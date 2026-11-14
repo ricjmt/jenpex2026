@@ -407,7 +407,7 @@ const JENPEX = {
             }
           ],
           horario: "20h20 às 22h05",
-          responsavel: "Vanessa Polli"
+          responsavel: "Jefferson Davi Ferreira dos Santos"
         },
         {
           sala: "Sala 4",
@@ -451,7 +451,7 @@ const JENPEX = {
             }
           ],
           horario: "20h20 às 22h05",
-          responsavel: "Regiane Gomes"
+          responsavel: "Vanessa Polli"
         }
       ],
       inicio: "20h20"
@@ -550,7 +550,7 @@ const JENPEX = {
             }
           ],
           horario: "20h às 21h00",
-          responsavel: "Jefferson Davi Ferreira dos Santos"
+          responsavel: "Regiane Gomes"
         },
         {
           sala: "Sala 4",
