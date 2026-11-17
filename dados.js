@@ -212,7 +212,6 @@ const JENPEX = {
     { eixo: "Eixo Temático 03 – Agrícola e Agronegócio", titulo: "O DESAFIO DE PROTEGER O MILHO SEM SEU PRINCIPAL ESCUDO", autores: "Cristiano Martins dos Santos, Guilherme Almeida Silva, Adriana Lopes Araújo, Alisson José Pereira, Willian Carlos dos Santos, Matheus Iuri Damo, Julio Cesar Etiene Pereira" },
     { eixo: "Eixo Temático 03 – Agrícola e Agronegócio", titulo: "importancia do tratamento de semente de algodao para controle com mela", autores: "Felipe Augusto de Castro de Carli" },
     { eixo: "Eixo Temático 03 – Agrícola e Agronegócio", titulo: "Principais fungicidas para controle de Stenocarpella spp. na cultura do milho", autores: "Gabriel Silva Meireles, Ivair Daneli Júnior, Klécio Ramon da Silva Santos, Renata Gabriely Aureliana Pedro, Maria Vanessa Leandro Rocha, Gabriela Cristina Adur, Michelle dos Santos Ribeiro, Eduardo Lirio Carnelossi, Janaína Almeida Talavieira" },
-    { eixo: "Eixo Temático 03 – Agrícola e Agronegócio", titulo: "AGRICULTURA ORGANICA E SUA CERTIFICAÇÃO", autores: "Gustavo Henrique da Silva, Pedro Henrique de Souza Alves, Alef Nascimento Sá, Kauan Henrique Alves Matias, Wendrew dos Santos Custódio", orientador: "Ailson Maciel de Almeida" },
     { eixo: "Eixo Temático 03 – Agrícola e Agronegócio", titulo: "FUNGICIDAS PARA MANCHA ALVO", autores: "Angela Vogt Webler, Gutemberg de Carvalho Nogueira, Claudia Matuchak, Landeir Oliveira, Thales Lucio Rodrigues Cavalcante" },
     { eixo: "Eixo Temático 03 – Agrícola e Agronegócio", titulo: "analise de solos - fertilidade", autores: "João Maria da Silva, Luclezio Carvalho Silva, Josue Pereira Alencar Madeira, Nicoly Pinto dos Santos, José Raul Rocha da Trindade, Gabrielle dos Santos Tenorio" }
   ],
@@ -289,11 +288,6 @@ const JENPEX = {
               titulo: "RPG matemático: narrativas imersivas como estratégia pedagógica para o ensino de Matemática nos anos iniciais",
               orientador: "Paula Torres Fernandes",
               autores: "Halyson Manosso, Simone Cristiane Cattaneo, Consuelo Lima da Silva"
-            },
-            {
-              hora: "21h20",
-              titulo: "Sementes crioulas e conservação da agrobiodiversidade",
-              autores: "Maria Vitória da Conceição Nunes dos Santos, Matheus Alves Malgarize, Nayara Sbabo, Marcelo Augusto Behling de Andrade, Djalma Vicente Gomes Netto, Laura Eduarda da Costa Neves, João Lucas Gonçalves Waltrick"
             },
             {
               hora: "21h35",
@@ -557,9 +551,20 @@ const JENPEX = {
               hora: "20h30",
               titulo: "Ferrugem-asiática da soja no Brasil: evolução do controle químico e desafios da resistência a fungicidas",
               autores: "João Maria da Silva, Luclezio Carvalho Silva, Josue Pereira Alencar Madeira, Nicoly Pinto dos Santos, José Raul Rocha da Trindade, Gabrielle dos Santos Tenorio"
+            },
+            {
+              hora: "20h45",
+              titulo: "Agricultura orgânica e sua certificação",
+              orientador: "Ailson Maciel de Almeida",
+              autores: "Gustavo Henrique da Silva, Pedro Henrique de Souza Alves, Alef Nascimento Sá, Kauan Henrique Alves Matias, Wendrew dos Santos Custódio"
+            },
+            {
+              hora: "21h",
+              titulo: "Sementes crioulas e conservação da agrobiodiversidade",
+              autores: "Maria Vitória da Conceição Nunes dos Santos, Matheus Alves Malgarize, Nayara Sbabo, Marcelo Augusto Behling de Andrade, Djalma Vicente Gomes Netto, Laura Eduarda da Costa Neves, João Lucas Gonçalves Waltrick"
             }
           ],
-          horario: "20h às 20h45",
+          horario: "20h às 21h15",
           responsavel: "Regiane Gomes"
         },
         {
