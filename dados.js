@@ -381,16 +381,15 @@ const JENPEX = {
             },
             {
               hora: "21h05",
-              titulo: "Relatório Fitotecnia 1",
-              eixo: "Eixo 03 – Agrícola e Agronegócio",
-              orientador: "Luis Otávio Cavicchioli Sgobi, Bruno Neves Barros",
-              autores: "João Felipe Tataíra Silva, André Rafael Siqueira Corrêa, Sabrina Araldi do Prado"
+              titulo: "Diagnóstico financeiro de construtora microempresa (ME): análise de fluxo de caixa, mão de obra e capital de giro na construção civil",
+              eixo: "Eixo 04 – Outros",
+              autores: "Bárbara Natália Ricardo de Meneses, Jayane Ramos de Lima, Jhonny Santana da Silva, Juvenilio Ferreira Gomes Neto"
             },
             {
               hora: "21h20",
-              titulo: "Maturação desuniforme e interferência de plantas daninhas de final de ciclo na cultura da soja",
-              eixo: "Eixo 03 – Agrícola e Agronegócio",
-              autores: "Milena Fronha Marques, Mariana Vilasbôas Both, Ezequiel Matheus Brugnera Milani, Juliana Matos de Oliveira, Welberton Vittorazzi Candido do Nascimento, Larissa Stell Silveira"
+              titulo: "Mini consultoria: gestão financeira e orçamentária e marketing estratégico",
+              eixo: "Eixo 04 – Outros",
+              autores: "Josiane Pereira de Souza, Lincoln dos Santos Braga"
             },
             {
               hora: "21h35",
@@ -442,15 +441,16 @@ const JENPEX = {
             },
             {
               hora: "21h20",
-              titulo: "Diagnóstico financeiro de construtora microempresa (ME): análise de fluxo de caixa, mão de obra e capital de giro na construção civil",
-              eixo: "Eixo 04 – Outros",
-              autores: "Bárbara Natália Ricardo de Meneses, Jayane Ramos de Lima, Jhonny Santana da Silva, Juvenilio Ferreira Gomes Neto"
+              titulo: "Maturação desuniforme e interferência de plantas daninhas de final de ciclo na cultura da soja",
+              eixo: "Eixo 03 – Agrícola e Agronegócio",
+              autores: "Milena Fronha Marques, Mariana Vilasbôas Both, Ezequiel Matheus Brugnera Milani, Juliana Matos de Oliveira, Welberton Vittorazzi Candido do Nascimento, Larissa Stell Silveira"
             },
             {
               hora: "21h35",
-              titulo: "Mini consultoria: gestão financeira e orçamentária e marketing estratégico",
-              eixo: "Eixo 04 – Outros",
-              autores: "Josiane Pereira de Souza, Lincoln dos Santos Braga"
+              titulo: "Relatório Fitotecnia 1",
+              eixo: "Eixo 03 – Agrícola e Agronegócio",
+              orientador: "Luis Otávio Cavicchioli Sgobi, Bruno Neves Barros",
+              autores: "João Felipe Tataíra Silva, André Rafael Siqueira Corrêa, Sabrina Araldi do Prado"
             },
             {
               hora: "21h50",
