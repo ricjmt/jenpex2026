@@ -175,25 +175,26 @@ const JENPEX = {
     { turma: "1º Agro A", orientador: "Daniel Valadão", trabalho: "Oleaginosas", local: "Sala 6" },
     { turma: "1º Agro B", orientador: "Talita", trabalho: "Campo de atuação de TA – Fruticultura", local: "Sala 7" },
     { turma: "1º Agro C", orientador: "Fábio", trabalho: "Olericultura", local: "Sala 16" },
-    { turma: "1º MSI", orientador: "Gustavo", trabalho: "Gincana Tecnológica", local: "Sala do 1º MSI" },
-    { turma: "2º Agro A", orientador: "Ailson", trabalho: "Produção animal: avicultura, piscicultura e apicultura", local: "Sala 9" },
+    { turma: "1º MSI", orientador: "Gustavo", trabalho: "Gincana Tecnológica", local: "Sala 4" },
+    { turma: "2º Agro A", orientador: "Ailson", trabalho: "Produção animal: avicultura, piscicultura, apicultura e sistema integrado", local: "Salas 9 e 14" },
     { turma: "2º Agro B", orientador: "Amanda", trabalho: "Pecuária: animais monogástricos", local: "Sala 12" },
-    { turma: "2º Agro C", orientador: "Késia", trabalho: "Ruminantes", local: "Sala 10" },
-    { turma: "2º MSI", orientador: "Monique e Gustavo", trabalho: "Escape Room", local: "Sala de Recursos e Atendimentos Individualizados" },
+    { turma: "2º Agro C", orientador: "Quézia", trabalho: "Ruminantes", local: "Sala 10" },
+    { turma: "2º MSI", orientador: "Monique e Gustavo", trabalho: "Escape Room e Espelho Inteligente", local: "Sala de Recursos e Atendimentos Individualizados / Corredor (ao lado da Sala 4)" },
     { turma: "3º Agro A", orientador: "José Vanor", trabalho: "Mecanização agrícola: exposição de implementos e conceitos práticos de mecanização agrícola", local: "Gramado entre o bloco de salas de aula e os laboratórios de Agronomia" },
-    { turma: "3º Agro B", orientador: "Alan Jacob, Ailson e Acácio", trabalho: "A confirmar", local: "A confirmar" },
-    { turma: "3º Agro C", orientador: "Melquisedeque", trabalho: "Exposição de maquetes", local: "Sala 3" },
-    { turma: "3º MSI", orientador: "Silbene, Thiago e Gustavo", trabalho: "Poesia compilada", local: "A definir" }
+    { turma: "3º Agro B", orientador: "Alan Jacob, Ailson e Acácio", trabalho: "Sistemas de irrigação", local: "Sala 15" },
+    { turma: "3º Agro C", orientador: "Melkezedeque", trabalho: "Exposição de maquetes", local: "Sala 3" },
+    { turma: "3º MSI", orientador: "Silbene, Thiago e Gustavo", trabalho: "Poesia compilada", local: "Laboratório 02 de Informática – Sala 5" }
   ],
 
   mostraOutras: [
     { atividade: "Laboratório de Biologia", responsavel: "Simoni Anese", descricao: "Apresentação do Laboratório de Biologia", local: "Laboratório de Biologia" },
-    { atividade: "Espaço de Zootecnia", responsavel: "Quézia", descricao: "Apresentação do espaço de Zootecnia", local: "Espaço de Zootecnia" },
+    { atividade: "Espaço de Zootecnia", responsavel: "Quézia", descricao: "Apresentação do espaço de Zootecnia", local: "Zootecnia" },
     { atividade: "Trabalhos de Linguagens – 1º anos", responsavel: "Aline Moraes", descricao: "Exposição de trabalhos desenvolvidos nas disciplinas de Linguagens", local: "Sala 22" },
-    { atividade: "Ditadura e questões raciais", responsavel: "Rafael, Alexandre e Gisele", descricao: "Exposição de trabalhos sobre ditadura e questões raciais", local: "Corredor / Hall de entrada" },
+    { atividade: "Ditadura, questões sociais e raciais", responsavel: "Rafael, Alexandre e Gisele", descricao: "Exposição de trabalhos sobre cultura e resistência na ditadura militar, questões sociais e raciais", local: "Corredor / Hall de entrada" },
     { atividade: "Laboratório de Solos", responsavel: "Daniel Valadão", descricao: "Apresentação do Laboratório de Solos", local: "Laboratório de Solos" },
     { atividade: "Laboratório de Microbiologia", responsavel: "Clara Suprani", descricao: "Apresentação do Laboratório de Microbiologia", local: "Laboratório de Microbiologia" },
-    { atividade: "Exposição sobre Petróleo", responsavel: "Aline Magela, Dham", descricao: "Trabalhos das turmas de 2º ano EMI", local: "Corredor / Hall de entrada (TV e mesa para exposição)" },
+    { atividade: "Exposição sobre Petróleo", responsavel: "Aline Magela, Dham", descricao: "O petróleo no nosso cotidiano: muito além dos combustíveis", local: "Laboratório de Matemática – Sala 13" },
+    { atividade: "Laboratório de Física", responsavel: "Jonathan", descricao: "Apresentação do Laboratório de Física", local: "Sala de reuniões – Sala 20" },
     { atividade: "Indicadores naturais de pH", responsavel: "Dham", descricao: "Apresentação demonstrativa de indicadores de pH", local: "Laboratório de Química" }
   ],
 
