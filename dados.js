@@ -565,7 +565,7 @@ const JENPEX = {
             }
           ],
           horario: "20h às 21h15",
-          responsavel: "Regiane Gomes"
+          responsavel: "Regiane Lopes de Oliveira"
         },
         {
           sala: "Sala 4",
